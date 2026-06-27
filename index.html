@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hati Terbang 💖</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 0 20px #ff4d6d;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d6d;
+    transform: rotate(45deg);
+    animation: fly 6s linear infinite;
+    opacity: 0;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff4d6d;
+  }
+
+  .heart::before { top: -10px; left: 0; }
+  .heart::after { left: -10px; top: 0; }
+
+  @keyframes fly {
+    0% {
+      transform: translateY(100vh) rotate(45deg) scale(0.5);
+      opacity: 0;
+    }
+    50% { opacity: 1; }
+    100% {
+      transform: translateY(-10vh) rotate(45deg) scale(1.2);
+      opacity: 0;
